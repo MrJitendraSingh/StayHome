@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402268368549",
+    "project_id": "stay-home-18b21",
+    "storage_bucket": "stay-home-18b21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402268368549:android:0f2fb795ce8d811f11e74c",
+        "android_client_info": {
+          "package_name": "com.example.stayhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402268368549-k1jb55n6mae1dhj8rs73vvr85rfot2io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP8VtH4qeXN7ywDHAylUWQzzs_v6Egne4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402268368549-k1jb55n6mae1dhj8rs73vvr85rfot2io.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

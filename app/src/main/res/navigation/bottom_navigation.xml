@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/innerHomeFragment">
+
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.stayhome.home.bottomNavFragments.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.stayhome.home.navFragments.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.stayhome.home.bottomNavFragments.OrderItemFragment"
+        android:label="Order"
+        tools:layout="@layout/fragment_order_item" >
+        <action
+            android:id="@+id/action_historyFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment"
+            app:popUpTo="@id/historyFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.stayhome.home.bottomNavFragments.OrderDetailsFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_order_details" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.stayhome.home.bottomNavFragments.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/settingFragment"/>
+        <action
+            android:id="@+id/action_settingFragment_to_logOutDialogFragment"
+            app:destination="@id/logOutDialogFragment"
+            app:popUpTo="@id/settingFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:popUpTo="@id/settingFragment"/>
+        <action
+            android:id="@+id/action_settingFragment_to_termAndConditionFragment"
+            app:destination="@id/termAndConditionFragment"
+            app:popUpTo="@id/settingFragment"/>
+        <action
+            android:id="@+id/action_settingFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment"
+            app:popUpTo="@id/settingFragment"/>
+        <action
+            android:id="@+id/action_settingFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+            app:popUpTo="@id/settingFragment"/>
+        <action
+            android:id="@+id/action_settingFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment"
+            app:popUpTo="@id/settingFragment"/>
+        <action
+            android:id="@+id/action_settingFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment"
+            app:popUpTo="@id/settingFragment"/>
+    </fragment>
+    <dialog
+        android:id="@+id/logOutDialogFragment"
+        android:name="com.example.stayhome.home.navFragments.LogOutDialogFragment"
+        android:label="fragment_log_out_dialog"
+        tools:layout="@layout/fragment_log_out_dialog" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.stayhome.home.navFragments.NotificationFragment"
+        android:label="@string/notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/termAndConditionFragment"
+        android:name="com.example.stayhome.home.navFragments.TermAndConditionFragment"
+        android:label="@string/term_and_condition"
+        tools:layout="@layout/fragment_term_and_condition" />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.example.stayhome.home.navFragments.PrivacyPolicyFragment"
+        android:label="@string/privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.stayhome.home.navFragments.ChangePasswordFragment"
+        android:label="@string/change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.stayhome.home.navFragments.AboutFragment"
+        android:label="@string/about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.example.stayhome.home.navFragments.FeedbackFragment"
+        android:label="@string/feedback"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/innerHomeFragment"
+        android:name="com.example.stayhome.home.bottomNavFragments.InnerHomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_inner_home" >
+        <action
+            android:id="@+id/action_innerHomeFragment_to_itemDetailsFragment2"
+            app:destination="@id/itemDetailsFragment"
+            app:popUpTo="@id/innerHomeFragment"/>
+        <action
+            android:id="@+id/action_innerHomeFragment_to_categoryItemsFragment"
+            app:destination="@id/categoryItemsFragment"
+            app:popUpTo="@id/innerHomeFragment" />
+        <action
+            android:id="@+id/action_innerHomeFragment_to_searchFragment2"
+            app:destination="@id/searchFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/innerHomeFragment"/>
+        <action
+            android:id="@+id/action_innerHomeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment"
+            app:popUpTo="@id/innerHomeFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/categoryItemsFragment"
+        android:name="com.example.stayhome.home.bottomNavFragments.CategoryItemsFragment"
+        android:label="@string/category"
+        tools:layout="@layout/fragment_category_items" >
+        <action
+            android:id="@+id/action_categoryItemsFragment_to_itemDetailsFragment"
+            app:destination="@id/itemDetailsFragment"
+            app:popUpTo="@id/categoryItemsFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailsFragment"
+        android:name="com.example.stayhome.home.bottomNavFragments.ItemDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_item_details" >
+        <action
+            android:id="@+id/action_itemDetailsFragment_to_cartFragment"
+            app:destination="@id/cartFragment"
+            app:popUpTo="@id/itemDetailsFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.stayhome.home.navFragments.SearchFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_search" />
+</navigation>
